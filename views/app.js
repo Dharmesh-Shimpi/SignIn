@@ -1,10 +1,9 @@
-import dotenv from 'dotenv';
-dotenv.config();
+
 function getGoogleAuth() {
 	const googeleAuthURL = 'https://accounts.google.com/o/oauth2/v2/auth';
 	const options = {
-		redirect_uri: process.env.START_URI,
-		client_id: process.env.CLIENT_ID,
+		redirect_uri: 'https://nodejs-authentication-o2xt.onrender.com',
+		client_id: '512294437222-jictqq1sf37uhcngoa0n7tt1pqcoolrv.apps.googleusercontent.com',
 		access_type: 'offline',
 		response_type: 'code',
 		prompt: 'consent',
