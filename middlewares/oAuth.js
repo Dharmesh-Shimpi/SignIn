@@ -16,8 +16,8 @@ export default class oAuth {
 		try {
 			const response = await axios.post(googeleAuthURL, values);
 			const { access_token } = response.data;
-			const decodedToken = jwt.decode(access_token);
-			console.log(decodedToken);
+			// const decodedToken = jwt.decode(access_token);
+			// console.log(decodedToken);
 			// if (decodedToken.exp < Date.now() / 1000) {
 			//   console.log('Access token has expired');
 			//   const response = await axios.post(googeleAuthURL, values);
