@@ -6,14 +6,11 @@ export default class oAuth {
 	static async signup(code) {
 		const googeleAuthURL = 'https://oauth2.googleapis.com/token';
 		const values = {
-			// these id's are here directly because it was not working with the env variables
-
 			code,
 			grant_type: 'authorization_code',
-			client_id:
-				'512294437222-jictqq1sf37uhcngoa0n7tt1pqcoolrv.apps.googleusercontent.com',
-			client_secret: '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',
-			redirect_uri: 'http://localhost:5000/oauth',
+			client_id: process.env.CLIENT_ID,
+			client_secret: process.env.CLIENT_SECRET,
+			redirect_uri: process.env.REDIRECT_URI,
 		};
 
 		try {
@@ -29,7 +26,6 @@ export default class oAuth {
 			// } else {
 			//   console.log('Access token is still valid');
 			// }
-			
 		} catch (error) {
 			console.log(error);
 		}
