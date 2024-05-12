@@ -5,7 +5,7 @@ function getGoogleAuth() {
 	const options = {
 		redirect_uri: process.env.START_URI,
 		client_id: process.env.CLIENT_ID,
-		access_type: 'online',
+		access_type: 'offline',
 		response_type: 'code',
 		prompt: 'consent',
 		scope: [
