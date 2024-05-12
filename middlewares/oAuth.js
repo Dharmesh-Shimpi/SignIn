@@ -7,7 +7,7 @@ export default class oAuth {
 		const values = {
 			code,
 			grant_type: 'authorization_code',
-			client_id: '512294437222-jictqq1sf37uhcngoa0n7tt1pqcoolrv.apps.googleusercontent.com',
+			client_id: process.env.CLIENT_ID,
 			client_secret: process.env.CLIENT_SECRET,
 			redirect_uri: process.env.REDIRECT_URI,
 		};
