@@ -1,5 +1,4 @@
 import dotenv from 'dotenv';
-import jwt from 'jsonwebtoken';
 import axios from 'axios';
 dotenv.config();
 export default class oAuth {
